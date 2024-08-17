@@ -1,0 +1,31 @@
+.footer {
+  background-color:  hsl(0, 0%, 9%);
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-conteudo {
+  margin: 0 auto;
+  max-width: 100;
+}
+
+.img-footer {
+  width: 40px;
+  height: 40px; 
+  margin: 5px 15px;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.imagens-footer {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
