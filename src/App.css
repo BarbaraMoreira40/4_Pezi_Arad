@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Italiana&display=swap');
+
+body {
+  background-image: url('assets/bg.png');
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FAF3ED;
+  z-index: 1000;
+  box-shadow: 0 1px 8px rgba(97, 97, 97, 0.3);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-logo {
+  flex: 0.5;
+}
+
+.logo-img {
+  height: 50px;
+  border-radius: 20%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Menu hambúrguer */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: #BF1F27;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.menu-toggle.open div:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open div:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-links.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #FAF3ED;
+  width: 100%;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links.show a {
+  padding: 10px 20px;
+}
+
+.nav-links.show a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: 'Italiana', serif;
+  color: #BF1F27;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+h2, h3 {
+  color: #ff000d;
+  font-family: "Edu AU VIC WA NT Hand";
+  color: #610000;
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  background-color:#faf3ed93;
+  text-align: justify;
+  
+}
+
+.imagem-inicial {
+  width: 100%;
+  height: auto;
+}
+
+.imagem-inicial img {
+  width: 100%;
+  height: 600px;
+}
+
+.conteudo{
+  margin: 50px;
+  padding: 50px;
+}
+
+.valores{
+  display: flex;
+  justify-content: first baseline;
+  align-items: center;
+}
+
+.valores-imagem{
+width: 300px;
+height: 300px;
+margin: 50px;
+border-radius: 100px 0;
+}
+
+.historia{
+display: flex;
+justify-content: first baseline;
+align-items: center;
+}
+
+.historia-imagem{
+width: 350px;
+height: 350px;
+margin: 50px;
+border-radius: 100px 0;
+}
+
+/* Responsividade */
+
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+@media (max-width: 570px) {
+  .nav-links.show a {
+    padding: 8px 16px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2, h3 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .conteudo {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .valores-imagem, .historia-imagem {
+    max-width: 250px;
+  }
+}
